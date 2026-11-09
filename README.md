@@ -6,15 +6,12 @@ Owen Mundy & Joelle Dietrick, 2007. Generative animation and sound.
 
 > Inspired by Jim Campbell's *Formula for Computer Art* and Tallahassee's annual sea of tree pollen, Owen Mundy and Joelle Dietrick created a generative animation referencing new forms of cross-pollination and re-use. Intentionally meditative and aesthetically pleasing, the format parodies computer art that simply crunches numbers to create useless forms. The diligently recorded data of the National Allergy Board guides the animation down a predictable path and stands in stark contrast to the chaos of everyday life. The project calls into question our obsession with mapping nature, as if grasping its sublimity would be essential to finding lifelong satisfaction.
 
-This is a dependency-free vanilla JavaScript rebuild of the original ActionScript 2 / Flash piece (`../anemophilous-formula-2009-flash`). It replaces an unfinished 2023 JS attempt (`../pollen`).
+This is a dependency-free vanilla JavaScript rebuild of the original ActionScript 2 / Flash piece.
 
 ## Running it
 
-Open `index.html` in a browser. It works straight from the filesystem, but serving it gives a gapless sound loop:
+Open `index.html` in a browser. It works straight from the filesystem, but using live server gives a gapless sound loop.
 
-```sh
-python3 -m http.server 8000   # then visit http://localhost:8000
-```
 
 There's no build step. Deploy the folder to any static host as is.
 
@@ -30,6 +27,10 @@ There's no build step. Deploy the folder to any static host as is.
 | `?kiosk` | for installations: skip the title, hide the cursor, start sound on the first click or key press |
 | `?day=21` | start on a given day of March |
 | `?muted` | start with sound off |
+
+
+<!-- 
+
 
 ## How it works
 
@@ -56,6 +57,10 @@ The main timeline code was recovered from the UTF-16 ActionScript text stored in
 - **Background photo.** The only clean source is 1000×521 (`wallpaper.psd`; the 3300px documentation PSD is an upscaled screen capture with grains baked in). The lossless PSD was flattened and enlarged 3× with Photoshop's Preserve Details 2.0, so it holds up on large and high-density screens. Its colors match the 2009 JPEG. The page resamples it once to the exact screen size on each resize.
 - **Clock.** In the original, `clock_mc` stepped one of 40 frames every 100 ms. Here the hand sweeps continuously at the same rate.
 - **Unused.** The `mask` clip, the commented-out triangle markers (`point_mc`) and the `chart` FLA (a bar chart of the same data) aren't part of the running piece and were not ported.
+
+-->
+
+
 
 ## License
 
